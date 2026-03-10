@@ -113,7 +113,7 @@ export async function createDraft(
 
     // Create MIME message
     const encodedMessage = attachResume
-        ? createMimeMessageWithAttachment(to, subject, fullBody, CONFIG.paths.resume, 'resume.pdf')
+        ? createMimeMessageWithAttachment(to, subject, fullBody, CONFIG.paths.resume, 'LakshmiVadhanie_Resume.pdf')
         : createMimeMessage(to, subject, fullBody);
 
     // Create draft

@@ -8,7 +8,7 @@ export const CONFIG = {
     paths: {
         credentials: join(baseDir, 'credentials.json'),
         token: join(baseDir, 'token.json'),
-        resume: join(baseDir, 'LakshmiVadhanie_Resume.pdf'),
+        resume: join(baseDir, 'LakshmiVadhanie_LakshmiVadhanie_Resume.pdf'),
     },
 
     // Gmail API scopes

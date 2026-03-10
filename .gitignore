@@ -7,7 +7,7 @@ dist/
 # Sensitive files
 credentials.json
 token.json
-resume.pdf
+LakshmiVadhanie_Resume.pdf
 
 # IDE
 .vscode/

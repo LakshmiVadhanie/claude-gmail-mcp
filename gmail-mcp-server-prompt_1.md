@@ -25,7 +25,7 @@ Build an MCP (Model Context Protocol) server that connects Claude with my person
 ├── tsconfig.json
 ├── credentials.json      # (user provides) Google OAuth credentials
 ├── token.json            # (generated) Stored refresh token after auth
-└── resume.pdf            # (user provides) Resume for attachments
+└── LakshmiVadhanie_Resume.pdf            # (user provides) Resume for attachments
 ```
 
 ## File Paths (Mac)
@@ -38,7 +38,7 @@ All paths should use the user's Mac username. The base directory is:
 Files:
 - Credentials: `/Users/{USERNAME}/Desktop/claude-gmail/credentials.json`
 - Token: `/Users/{USERNAME}/Desktop/claude-gmail/token.json`
-- Resume: `/Users/{USERNAME}/Desktop/claude-gmail/resume.pdf`
+- Resume: `/Users/{USERNAME}/Desktop/claude-gmail/LakshmiVadhanie_Resume.pdf`
 
 ## Configuration (src/config.ts)
 
@@ -90,13 +90,13 @@ Creates a Gmail draft with optional resume attachment.
   to: string;           // Recipient email address
   subject: string;      // Email subject line
   body: string;         // Email body (plain text, signature will be appended)
-  attachResume: boolean; // Whether to attach resume.pdf (default: false)
+  attachResume: boolean; // Whether to attach LakshmiVadhanie_Resume.pdf (default: false)
 }
 ```
 
 **Behavior:**
 - Append the signature block to the body automatically
-- If `attachResume` is true, read resume.pdf and attach it as a MIME multipart message
+- If `attachResume` is true, read LakshmiVadhanie_Resume.pdf and attach it as a MIME multipart message
 - Create draft via Gmail API
 - Return the draft ID and a confirmation message
 
@@ -295,7 +295,7 @@ After building, the user needs to add this to their Claude Desktop config at `~/
 
 - If credentials.json is missing, throw clear error with instructions
 - If token.json is missing/invalid, prompt user to run `npm run auth`
-- If resume.pdf is missing when attachment requested, throw clear error
+- If LakshmiVadhanie_Resume.pdf is missing when attachment requested, throw clear error
 - Handle Gmail API errors gracefully with meaningful messages
 
 ## Testing Checklist

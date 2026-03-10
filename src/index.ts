@@ -17,7 +17,7 @@ const CreateDraftSchema = z.object({
     to: z.string().email().describe('Recipient email address'),
     subject: z.string().describe('Email subject line'),
     body: z.string().describe('Email body (signature will be appended automatically)'),
-    attachResume: z.boolean().default(false).describe('Whether to attach resume.pdf'),
+    attachResume: z.boolean().default(false).describe('Whether to attach LakshmiVadhanie_Resume.pdf'),
 });
 
 const ListDraftsSchema = z.object({
@@ -56,7 +56,7 @@ const tools: Tool[] = [
                 },
                 attachResume: {
                     type: 'boolean',
-                    description: 'Whether to attach resume.pdf (default: false)',
+                    description: 'Whether to attach LakshmiVadhanie_Resume.pdf (default: false)',
                     default: false,
                 },
             },
@@ -296,12 +296,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             };
         }
 
-        if (errorMessage.includes('resume.pdf')) {
+        if (errorMessage.includes('LakshmiVadhanie_Resume.pdf')) {
             return {
                 content: [
                     {
                         type: 'text',
-                        text: `❌ Error: ${errorMessage}\n\nPlease place your resume.pdf in the project directory.`,
+                        text: `❌ Error: ${errorMessage}\n\nPlease place your LakshmiVadhanie_Resume.pdf in the project directory.`,
                     },
                 ],
                 isError: true,

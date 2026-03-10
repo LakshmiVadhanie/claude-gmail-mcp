@@ -5,7 +5,7 @@ MCP (Model Context Protocol) server that connects Claude Desktop with Gmail, ena
 ## Features
 
 - **Create Drafts**: Create email drafts with automatic signature appending
-- **Resume Attachments**: Optionally attach resume.pdf to drafts
+- **Resume Attachments**: Optionally attach LakshmiVadhanie_Resume.pdf to drafts
 - **List Drafts**: View all current Gmail drafts
 - **Send Drafts**: Send drafts after review
 - **Read Emails**: Search and read Gmail messages with full content
@@ -56,7 +56,7 @@ This will:
 
 ### 5. (Optional) Add Resume
 
-Place your resume as `resume.pdf` in the project root to enable attachment functionality.
+Place your resume as `LakshmiVadhanie_Resume.pdf` in the project root to enable attachment functionality.
 
 ### 6. Configure Claude Desktop
 
@@ -89,7 +89,7 @@ Create a Gmail draft with optional resume attachment.
 - `to` (string): Recipient email address
 - `subject` (string): Email subject line
 - `body` (string): Email body (signature appended automatically)
-- `attachResume` (boolean, optional): Whether to attach resume.pdf
+- `attachResume` (boolean, optional): Whether to attach LakshmiVadhanie_Resume.pdf
 
 **Example:**
 ```
@@ -172,7 +172,7 @@ Find emails about "job application" from the last week
 ├── tsconfig.json
 ├── credentials.json      # Google OAuth credentials (you provide)
 ├── token.json            # Stored refresh token (generated)
-└── resume.pdf            # Your resume (optional, you provide)
+└── LakshmiVadhanie_Resume.pdf            # Your resume (optional, you provide)
 ```
 
 ## Troubleshooting
@@ -184,7 +184,7 @@ Create OAuth credentials from Google Cloud Console and save as `credentials.json
 Run `npm run auth` to complete the OAuth flow.
 
 ### "Resume file not found"
-Place your `resume.pdf` in the project root, or don't use `attachResume: true`.
+Place your `LakshmiVadhanie_Resume.pdf` in the project root, or don't use `attachResume: true`.
 
 ### Token expired
 The server automatically refreshes tokens. If refresh fails, delete `token.json` and run `npm run auth` again.
