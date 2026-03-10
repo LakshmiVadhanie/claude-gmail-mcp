@@ -1,16 +1,14 @@
 import { homedir } from 'os';
 import { join } from 'path';
 
-// Get the username for Mac paths
-const username = homedir().split('/').pop() || 'dhruvgorasiya';
-const baseDir = `/Users/${username}/Desktop/claude-gmail`;
+const baseDir = '/Users/lakshmivadhanie/Documents/claude-gmail-mcp';
 
 export const CONFIG = {
     // File paths
     paths: {
         credentials: join(baseDir, 'credentials.json'),
         token: join(baseDir, 'token.json'),
-        resume: join(baseDir, 'Dhruv_Gorasiya_Resume.pdf'),
+        resume: join(baseDir, 'LakshmiVadhanie_Resume.pdf'),
     },
 
     // Gmail API scopes
@@ -20,25 +18,25 @@ export const CONFIG = {
 
     // Email signature
     signature: `Best,
-Dhruv Gorasiya
+Lakshmi Vadhanie Ganesh
 
-Phone: (925) 297-7110
-LinkedIn: https://linkedin.com/in/dhruvgorasiya
-Portfolio: https://dhruvgorasiya.netlify.app
-GitHub: https://github.com/DhruvGorasiya`,
+Phone: (617) 992-5386
+LinkedIn: https://linkedin.com/in/lakshmivadhanie/
+Portfolio: https://lakshmivadhanie-portfolio.netlify.app/
+GitHub: https://github.com/LakshmiVadhanie`,
 
     // Profile context for email drafting
     profile: {
-        name: 'Dhruv Gorasiya',
-        education: 'MS in Computer Science at Northeastern University (3.92 GPA, graduating May 2026)',
-        currentRole: 'Teaching Assistant for MLOps course',
+        name: 'Lakshmi Vadhanie Ganesh',
+        education: 'MS in Data Science at Northeastern University (3.83 GPA, graduating May 2026)',
+        currentRole: 'Graduate Teaching Assistant for CS 7180: AI-Assisted Software Engineering',
         experience: [
-            'Software Developer Intern at Weaviate - built hybrid search systems and APIs handling 50K+ daily requests',
-            'Founded Twinly - AI productivity startup integrating Gmail, Notion, and Slack APIs, led team of 4 engineers',
-            'Research Assistant in ML at California State University Long Beach - locality sensitive hashing and entity resolution',
+            'ML Co-op at Wave Life Sciences - optimized prediction accuracy (R2 from 0.36 to 0.6) across 90K+ samples, accelerated ETL pipeline throughput by 85% on AWS',
+            'Research Assistant at SRM Institute - built NLP and adversarial ML pipelines with CNN, BERT, and GNN architectures on 100K+ text records, published peer-reviewed research',
+            'ML Engineer Intern at Zoho Corporation - developed scalable analytics pipelines reducing resolution time by 40% across 10K+ monthly queries, built NL-to-SQL interface on PostgreSQL and ElasticSearch',
         ],
-        skills: 'Python, TypeScript, FastAPI, React, PostgreSQL, Vector Databases, AI/ML Infrastructure',
-        targetRoles: 'Software Engineering roles with AI/ML focus',
+        skills: 'Python, SQL, PySpark, AWS, Azure, LangChain, RAG, Databricks, Snowflake, scikit-learn, PyTorch, Docker, Tableau, Power BI',
+        targetRoles: 'Data Science, ML Engineering, and AI/Software Engineering roles',
     },
 
     // OAuth2 settings

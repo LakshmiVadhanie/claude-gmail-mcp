@@ -29,7 +29,7 @@ async function main() {
         console.log('     "mcpServers": {');
         console.log('       "gmail": {');
         console.log('         "command": "node",');
-        console.log('         "args": ["/Users/YOUR_USERNAME/Desktop/claude-gmail/dist/index.js"]');
+        console.log('         "args": ["/Users/lakshmivadhanie/Documents/claude-gmail-mcp/dist/index.js"]');
         console.log('       }');
         console.log('     }');
         console.log('   }');
